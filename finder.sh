@@ -61,16 +61,16 @@ fi
 
 gfip(){
 if [ ! -f cfcdnip ]; then
-curl -L -o cfcdnip -# --retry 2 https://github.com/SonzaiEkkusu/Proxy-Finder/raw/main/tools/linux/linux-$cpu
+curl -L -o cfcdnip -# --retry 2 https://github.com/arbytzy/IPCF-Scraper/raw/main/tools/linux/linux-$cpu
 chmod +x cfcdnip
 fi
 echo "1、Pilih IPV4 resmi CF"
 echo "2、Pilih IPV6 resmi CF (Jaringan lokal harus mendukung IPV6)"
 read -p "Silakan pilih: " point
 if [ "$point" = "1" ]; then
-curl -s -o ip.txt https://raw.githubusercontent.com/SonzaiEkkusu/Proxy-Finder/main/ipv4.txt
+curl -s -o ip.txt https://raw.githubusercontent.com/arbytzy/IPCF-Scraper/main/ipv4.txt
 elif [ "$point" = "2" ]; then
-curl -s -o ip.txt https://raw.githubusercontent.com/SonzaiEkkusu/Proxy-Finder/main/ipv6.txt
+curl -s -o ip.txt https://raw.githubusercontent.com/arbytzy/IPCF-Scraper/main/ipv6.txt
 else
 echo "Input salah, silakan pilih lagi" && gfip
 fi
@@ -122,9 +122,9 @@ fi
 
 fdip(){
 if [ ! -f cfcdnip ]; then
-curl -L -o cfcdnip -# --retry 2 https://github.com/SonzaiEkkusu/Proxy-Finder/raw/main/tools/linux/cfst/linux-$cpu
+curl -L -o cfcdnip -# --retry 2 https://github.com/arbytzy/IPCF-Scraper/raw/main/tools/linux/cfst/linux-$cpu
 chmod +x cfcdnip
-curl -sSLO https://mirror.ghproxy.com/https://raw.githubusercontent.com/SonzaiEkkusu/Proxy-Finder/main/locations.json
+curl -sSLO https://mirror.ghproxy.com/https://raw.githubusercontent.com/arbytzy/IPCF-Scraper/main/locations.json
 fi
 echo "Mengunduh file pembaruan proxy IP database txt.zip..."
 wget -q https://zip.baipiao.eu.org -O txt.zip
